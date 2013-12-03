@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}{{titulo}}{% endblock %}
+{% block contenido %}
+  <div class="row">
+    {% for articulo in posts %}
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <img src="{{MEDIA_URL}}{{articulo.portada}}">
+          <div class="caption" style="text-align:center">
+            <h3><a href="{% url 'detalle' articulo.id %}">{{articulo.titulo|capfirst}}</a></h3>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div
+{% endblock%}

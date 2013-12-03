@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block titulo %}{{titulo}}{% endblock %}
+{% block contenido %}
+	<div class="row">
+		<div class="col-sm-6 col-md-12">
+			<div class="thumbnail">
+				<img src="{{MEDIA_URL}}{{autor.imagenAutor}}">
+				<div class="caption">
+					<h3>{{autor.username|capfirst}}</h3>
+					<p>{{autor.info}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

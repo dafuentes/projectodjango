@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block titulo %}{{titulo}}{% endblock %}
+{% block contenido %}
+	<div class="row">
+		<div class="col-sm-6 col-md-12">
+			<div class="thumbnail">
+				<img src="{{MEDIA_URL}}{{post.portada}}">
+				<div class="caption">
+					<h3>{{post.titulo|capfirst}}</h3>
+					<small>{{post.fecha_publicacion}}</small>
+					<p>{{post.contenido}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
